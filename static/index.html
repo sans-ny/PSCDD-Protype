@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Local Chat</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1>Local Chat</h1>
+        <p class="subtitle">
+          Local model (Ollama or OpenAI). Questions about the latest news, posts, or Truth Social /
+          Twitter-style topics trigger a web search automatically unless you disable that in .env
+          (AUTO_SEARCH_RECENCY=0). You can also check Search online to always fetch for that message.
+        </p>
+      </header>
+      <main class="chat" id="chat" aria-live="polite"></main>
+      <label class="web-toggle">
+        <input type="checkbox" id="useWeb" />
+        <span>Search online (web + pasted links)</span>
+      </label>
+      <form class="composer" id="form" autocomplete="off">
+        <textarea
+          id="input"
+          rows="2"
+          placeholder="Type a message…"
+          required
+        ></textarea>
+        <button type="submit" id="send">Send</button>
+      </form>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
