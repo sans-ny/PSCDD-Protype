@@ -118,11 +118,19 @@ body {
   align-items: center;
   gap: 0.65rem;
   min-height: 1.5rem;
+  width: 100%;
 }
 
 .pending-status {
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.pending-timer {
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  margin-left: auto;
 }
 
 .spinner {
@@ -175,7 +183,106 @@ body {
   border-radius: 8px;
   background: var(--surface);
   border: 1px solid var(--border);
-  max-height: 220px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.thinking-elapsed {
+  font-size: 0.82rem;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+
+.thinking-elapsed .elapsed-val {
+  font-weight: 600;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.thinking-hint {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+
+.assistant-body {
+  margin-bottom: 0.35rem;
+}
+
+.msg.assistant .assistant-html {
+  white-space: normal;
+}
+
+.assistant-html p {
+  margin: 0 0 0.55rem;
+}
+
+.assistant-html p:last-child {
+  margin-bottom: 0;
+}
+
+.assistant-html a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.assistant-html a:hover {
+  filter: brightness(1.08);
+}
+
+.assistant-html strong {
+  font-weight: 600;
+}
+
+.msg-sources {
+  margin-top: 0.65rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.msg-sources-title {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.msg-sources-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.82rem;
+}
+
+.msg-sources-list a {
+  color: var(--accent);
+  word-break: break-all;
+}
+
+.thinking-trace {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+}
+
+.thinking-trace summary {
+  cursor: pointer;
+  color: var(--muted);
+  user-select: none;
+}
+
+.thinking-trace-pre {
+  margin: 0.4rem 0 0;
+  padding: 0.5rem 0.65rem;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 0.72rem;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 200px;
   overflow-y: auto;
 }
 
